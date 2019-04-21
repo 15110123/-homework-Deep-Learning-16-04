@@ -338,3 +338,5 @@ ASALocalRun/
 
 # BeatPulse healthcheck temp database
 healthchecksdb
+/Src/VGG/VGG16/vgg16_weights_v2.h5
+/Src/VGG/VGG16/vgg16_weights.h5
