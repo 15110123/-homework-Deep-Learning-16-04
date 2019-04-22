@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "VGG16", "VGG16\VGG16.pyproj", "{BA001D24-E86F-45F6-A7BF-976E5B86F373}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "VGG", "VGG16\VGG.pyproj", "{BA001D24-E86F-45F6-A7BF-976E5B86F373}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

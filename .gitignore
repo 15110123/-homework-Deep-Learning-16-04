@@ -340,3 +340,4 @@ ASALocalRun/
 healthchecksdb
 /Src/VGG/VGG16/vgg16_weights_v2.h5
 /Src/VGG/VGG16/vgg16_weights.h5
+/Src/VGG/VGG16/vgg19_weights_v2.h5

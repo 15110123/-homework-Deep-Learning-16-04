@@ -10,7 +10,7 @@ def warn(*args, **kwargs):
     pass
 warnings.warn = warn
 
-def VGG_16(weights_path=None):
+def VGG_19(weights_path=None):
     model = Sequential()
     model.add(ZeroPadding2D((1,1),input_shape=(3,224,224)))
     model.add(Convolution2D(64, 3, 3, activation='relu'))
@@ -30,6 +30,8 @@ def VGG_16(weights_path=None):
     model.add(Convolution2D(256, 3, 3, activation='relu'))
     model.add(ZeroPadding2D((1,1)))
     model.add(Convolution2D(256, 3, 3, activation='relu'))
+    model.add(ZeroPadding2D((1,1)))
+    model.add(Convolution2D(256, 3, 3, activation='relu'))
     model.add(MaxPooling2D((2,2), strides=(2,2)))
 
     model.add(ZeroPadding2D((1,1)))
@@ -38,8 +40,12 @@ def VGG_16(weights_path=None):
     model.add(Convolution2D(512, 3, 3, activation='relu'))
     model.add(ZeroPadding2D((1,1)))
     model.add(Convolution2D(512, 3, 3, activation='relu'))
+    model.add(ZeroPadding2D((1,1)))
+    model.add(Convolution2D(512, 3, 3, activation='relu'))
     model.add(MaxPooling2D((2,2), strides=(2,2)))
 
+    model.add(ZeroPadding2D((1,1)))
+    model.add(Convolution2D(512, 3, 3, activation='relu'))
     model.add(ZeroPadding2D((1,1)))
     model.add(Convolution2D(512, 3, 3, activation='relu'))
     model.add(ZeroPadding2D((1,1)))
@@ -66,7 +72,7 @@ if __name__ == "__main__":
     im = np.expand_dims(im, axis=0)
 
     # Test pretrained model
-    model = VGG_16('vgg16_weights_v2.h5')
+    model = VGG_19('vgg19_weights_v2.h5')
     sgd = SGD(lr=0.1, decay=1e-6, momentum=0.9, nesterov=True)
     model.compile(optimizer=sgd, loss='categorical_crossentropy')
     out = model.predict(im)
